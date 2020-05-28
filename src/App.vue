@@ -1,14 +1,17 @@
 <template>
   <div id="app">
     <the-navbar />
+    <side-navbar />
     <router-view />
   </div>
 </template>
 <script>
 import TheNavbar from '@/components/TheNavbar.vue';
+import SideNavbar from '@/components/SideNavbar.vue';
 
 export default {
   components: {
+    SideNavbar,
     TheNavbar,
   },
 };

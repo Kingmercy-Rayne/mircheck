@@ -1,47 +1,22 @@
 <template>
   <div class="v-search">
-    <form action="" @submit.prevent="fetchPostsFromSubreddit">
-      <button type="submit"><i class="fas fa fa-search"></i></button>
+    <form action="" @submit.prevent>
       <input
         type="search"
         name="search"
-        v-model="searchInput"
-        placeholder="Search for a subreddit"
-        aria-label="Search for different subreddit"
+        placeholder="Search"
+        aria-label="Search for a transaction"
       />
+      <button type="submit" class="btn--border-alt"><i class="fas fa fa-search"></i></button>
     </form>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+// import { mapState } from 'vuex';
 
 export default {
   name: 'VSearch',
-  // data() {
-  //   return {
-  //     searchInput: '',
-  //   };
-  // },
-  computed: {
-    ...mapState(['targetSubreddit']),
-    searchInput: {
-      // bind the Computed Setter directly to the store mutation
-      // and v-model the getter unto the Inputfield
-      set(searchInput) {
-        this.$store.commit('CHANGE_TARGET_SUBREDDIT', searchInput);
-      },
-      get() {
-        return this.targetSubreddit;
-      },
-    },
-  },
-  methods: {
-    fetchPostsFromSubreddit() {
-      this.$store.commit('CHANGE_LOADING_STATE', true);
-      this.$store.dispatch('FETCH_POSTS');
-    },
-  },
 };
 </script>
 
@@ -49,7 +24,7 @@ export default {
 .v-search {
   // border: solid thin brown;
   // padding: 0.5em;
-  width: 45%;
+  width: 20%;
   font-family: var(--font-family--primary);
 
   @media screen and (max-width: 800px) {
@@ -69,7 +44,7 @@ export default {
     height: 100%;
     display: flex;
     align-items: center;
-    border-radius: 1em;
+    border-radius: 0.8em;
     border: solid thin var(--border-color--alt);
     background: var(--search-area-bg);
 
@@ -77,31 +52,32 @@ export default {
       width: 100%;
       padding: var(--form-padding);
       background: none;
-      color: var(--text-color--primary);
+      color: #000;
       border: none;
-      font-size: 1rem;
+      font-size: 0.8rem;
 
       @media screen and (max-width: 800px) {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
       }
     }
 
     button {
       // border: solid thin green;
       top: 0;
-      left: 0;
+      right: 0;
       bottom: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: var(--form-padding);
+      background: transparent;
 
       i {
-        color: var(--text-color--primary);
-        font-size: 1rem;
+        color: var(--text-color--tri);
+        font-size: 0.8rem;
 
         @media screen and (max-width: 800px) {
-          font-size: 0.8rem;
+          font-size: 0.6rem;
         }
       }
     }

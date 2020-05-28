@@ -5,9 +5,9 @@
   --text-color--primary: #fff;
   --text-color--alt: #00ff00;
   --text-color--tri: #e22a53;
-  /* --bg-color--primary: #1F1F25; */
-  --bg-color--primary: #2b2c32;
-  --bg-color--alt: #3a3a45;
+  --bg-color--primary: #1F1F25;
+  --bg-color--alt: #2b2c32;
+  --bg-color--tri: #111;
   --border-color--primary: #bbb;
   --border-color--alt: #f8f8ff;
   --button-bg--primary: #e22a53;
@@ -16,7 +16,8 @@
   --font-family--primary: 'Catamaran';
   --font-family--alt: 'Montserrat';
   /* padding-LR--global = horizontal spacing around site main components */
-  --padding-LR--global: 15%;
+  --padding-L--global: 20%;
+  --padding-R--global: 3%;
 }
 html[data-theme='dark'] {
   --primary-color: #051024;
