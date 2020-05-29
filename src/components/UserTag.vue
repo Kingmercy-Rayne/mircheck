@@ -36,10 +36,10 @@ export default {
     // height: 2rem;
     // overflow: none;
     img {
-      width: 3em;
-      height: 3em;
+      width: 2.5em;
+      height: 2.5em;
       border-radius: 50%;
-      border: solid 2px brown;
+      border: solid 2px var(--text-color--tri);
       object-fit: cover;
       object-position: top top;
     }
@@ -51,7 +51,7 @@ export default {
     align-items: flex-start;
     padding: 0 0.5em;
     font-size: 0.8rem;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
 
     .user__name {
       // font-size: 1.2rem;

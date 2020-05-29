@@ -1,6 +1,8 @@
 <template>
   <div class="page home">
-    <section class="section1"></section>
+    <section class="section1">
+      <user-wallets />
+    </section>
     <section class="section2"></section>
     <section class="section3"></section>
   </div>
@@ -8,10 +10,13 @@
 
 <script>
 // @ is an alias to /src
+import UserWallets from '@/components/UserWallets.vue';
 
 export default {
   name: 'Home',
-  components: {},
+  components: {
+    UserWallets,
+  },
 };
 </script>
 <style lang="stylus" scoped>
@@ -29,19 +34,19 @@ export default {
   grid-row-gap: 0.5em;
 
   .section1 {
+    grid-area: 1 / 1 / 9 / 3;
+    border: solid thin green;
+  }
+
+  .section2 {
     grid-area: 1 / 3 / 5 / 4;
     display: flex;
     flex-direction: column;
     border: solid thin green;
   }
 
-  .section2 {
-    grid-area: 5 / 3 / 9 / 4;
-    border: solid thin green;
-  }
-
   .section3 {
-    grid-area: 1 / 1 / 9 / 3;
+    grid-area: 5 / 3 / 9 / 4;
     border: solid thin green;
   }
 }
