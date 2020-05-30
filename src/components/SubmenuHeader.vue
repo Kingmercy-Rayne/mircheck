@@ -1,8 +1,8 @@
 <template>
-  <h4 class="submenu__header">
-    <span>wallets</span>
+  <h5 class="submenu__header">
+    <span>{{ nameTag }}</span>
     <i class="fas fa fa-ellipsis-h"></i>
-  </h4>
+  </h5>
 </template>
 
 <script>
@@ -14,7 +14,6 @@ export default {
 <style lang="stylus" scoped>
 .submenu__header {
   width: 100%;
-//   border: solid thin cyan;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +21,7 @@ export default {
   text-transform: capitalize;
   color: var(--text-color--primary);
   font-family: var(--font-family--alt);
-  font-weight: 400;
+  font-weight: 600;
 
   i {
     font-weight: 400;

@@ -1,6 +1,6 @@
 <template>
   <div class="user-wallets">
-    <submenu-header />
+    <submenu-header nameTag="wallets" />
     <ul class="wallet__item__list">
       <user-wallet-item
         v-for="(item, index) in walletItems"
@@ -14,18 +14,21 @@
       />
       <i class="wallet__item__paginator fas fa fa-angle-right"></i>
     </ul>
+    <path-informer />
   </div>
 </template>
 
 <script>
 import SubmenuHeader from '@/components/SubmenuHeader.vue';
 import UserWalletItem from '@/components/UserWalletItem.vue';
+import PathInformer from '@/components/PathInformer.vue';
 
 export default {
   name: 'UserWallets',
   components: {
     SubmenuHeader,
     UserWalletItem,
+    PathInformer,
   },
   data() {
     return {
@@ -58,8 +61,6 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 2em;
-  padding-right: 1.5em;
 
   .wallet__item__list {
     display: flex;

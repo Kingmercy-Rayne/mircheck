@@ -2,6 +2,7 @@
   <div class="page home">
     <section class="section1">
       <user-wallets />
+      <user-expenses />
     </section>
     <section class="section2"></section>
     <section class="section3"></section>
@@ -11,11 +12,13 @@
 <script>
 // @ is an alias to /src
 import UserWallets from '@/components/UserWallets.vue';
+import UserExpenses from '@/components/UserExpenses.vue';
 
 export default {
   name: 'Home',
   components: {
     UserWallets,
+    UserExpenses,
   },
 };
 </script>
@@ -35,6 +38,8 @@ export default {
 
   .section1 {
     grid-area: 1 / 1 / 9 / 3;
+    padding-left: 2em;
+    padding-right: 1.5em;
     border: solid thin green;
   }
 
